@@ -1,3 +1,4 @@
+// Author: Alex Lewtschuk
 package utils
 
 // Removes any occuences of the element you wish to delete from a slice
