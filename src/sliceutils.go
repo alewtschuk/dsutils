@@ -1,5 +1,5 @@
 // Author: Alex Lewtschuk
-package utils
+package dsutils
 
 // Removes any occuences of the element you wish to delete from a slice
 // Returns the slice with the element removed
