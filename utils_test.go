@@ -44,12 +44,12 @@ func TestRemoveSliceInt(t *testing.T) {
 	}
 }
 
-func TestRemoveSliceFloat32(t *testing.T) {
+func TestRemoveSliceFloat64(t *testing.T) {
 	var slice []float64 = []float64{0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0}
 	var numRemoved int
 	for i := 0; i < len(slice); i++ {
-		var md float64 = math.Mod(slice[i]+0.00001, 0.2)
-		if -0.001 < md && md < 0.001 { //md must be in between the interval (-0.001, 0.001) of small float number as it wont be exactly 0
+		var md float64 = math.Mod(slice[i]+0.00001, 0.2) //Using the math.Mod and the small number 0.00001 to push the resulting mod into range
+		if -0.001 < md && md < 0.001 {                   //md must be in between the interval (-0.001, 0.001) of small float number as it wont be exactly 0
 			slice[i] = 10.0
 			numRemoved++
 		}
