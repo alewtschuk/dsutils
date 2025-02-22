@@ -16,8 +16,8 @@ func Remove[Element comparable](elementToDelete Element, slice []Element) []Elem
 	return slice[:i] // Return the slice up to index i, which is the new length of the slice
 }
 
-// Ensures that any slice passed to the function contains no duplicate values in the slice
-// Returns a slice that holds all unique values in the original slice
+// Ensures that any slice passed to the function contains no duplicate values in the slice.
+// Returns a slice that holds all unique values in the original slice.
 // Utilizes a pseudo-set by creating a map holding only index values and an empty struct
 // This usage of a map and empty struct reduces memory overhead as struct{}{} takes up no memory
 // and map utilization ensures O(1) lookup speed
