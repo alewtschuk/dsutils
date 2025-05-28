@@ -20,5 +20,5 @@ jobs:
       with:
         go-version: '1.24'
 
-    - name: Test
+    - name: dsutils
       run: go test 
